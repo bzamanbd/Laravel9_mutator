@@ -8,8 +8,8 @@ class MemberController extends Controller
 {
     function index(){
         $member = new Member();
-        $member->name='radifa';
-        $member->address=' mirpur';
+        $member->name='Nnancy';
+        $member->address='mirpur';
         $member->save();
         return 'data added successfully';
     }

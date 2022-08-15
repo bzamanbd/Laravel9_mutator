@@ -12,7 +12,12 @@ class Member extends Model
     public $timestamps = false;
 
     function setAddressAttribute($value){
-        return $this->attributes['address'] = $value.', dhaka';
+        // $value = $this->attributes["address"];
+        if (strpos($value,'dhaka')!==false) {
+            return $this->attributes['address'] = $value;
+        } else {
+            return $this->attributes['address'] = $value.', dhaka';
+        }
 
     }
 }
